@@ -1,0 +1,1459 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>51暗黑网_暗黑美学影像社区_品牌官方网站</title>
+<meta name="description" content="51暗黑网官方网站，专注暗黑美学影像内容的视频平台。汇聚原创暗黑风格短片、深度访谈与创作社区，为创作者与企业搭建高品质内容生态，持续输出值得信赖的精品内容。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c0c0f'/%3E%3Cpath d='M18 16h20l8 8v24H18z' fill='none' stroke='%23ff3b4e' stroke-width='4'/%3E%3Cpath d='M26 28l14 8-14 8z' fill='%23b388ff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --dk-bg:#0b0b0e;
+  --dk-bg-2:#111116;
+  --dk-bg-3:#17171e;
+  --dk-line:#26262f;
+  --dk-line-soft:#1e1e26;
+  --dk-txt:#ececf1;
+  --dk-txt-2:#a9a9b8;
+  --dk-txt-3:#75758a;
+  --dk-red:#ff3b4e;
+  --dk-red-soft:rgba(255,59,78,.14);
+  --dk-violet:#b388ff;
+  --dk-violet-soft:rgba(179,136,255,.14);
+  --dk-cyan:#4cf0d0;
+  --dk-radius:14px;
+  --dk-shadow:0 18px 46px rgba(0,0,0,.55);
+  --dk-sticky:106px;
+  --dk-font:"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--dk-sticky)}
+body{
+  margin:0;
+  font-family:var(--dk-font);
+  background:var(--dk-bg);
+  color:var(--dk-txt);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+h1,h2,h3,h4{margin:0;line-height:1.3;font-weight:800}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+::selection{background:var(--dk-red);color:#fff}
+
+/* ============ 吸顶容器 ============ */
+.dk-sticky-wrap{
+  position:sticky;
+  top:0;
+  z-index:80;
+  background:rgba(11,11,14,.94);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--dk-line);
+}
+
+/* 公告条 */
+.dk-notice-bar{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:8px 22px;
+  font-size:12.5px;
+  letter-spacing:.02em;
+  background:linear-gradient(90deg,rgba(255,59,78,.16),rgba(179,136,255,.1) 55%,rgba(76,240,208,.08));
+  border-bottom:1px solid var(--dk-line-soft);
+  color:var(--dk-txt-2);
+  white-space:nowrap;
+  overflow:hidden;
+}
+.dk-notice-badge{
+  flex:none;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.14em;
+  color:var(--dk-red);
+  border:1px solid rgba(255,59,78,.45);
+  border-radius:4px;
+  padding:1px 7px;
+  text-transform:uppercase;
+}
+.dk-notice-track{overflow:hidden;flex:1}
+.dk-notice-track span{display:inline-block;padding-right:60px}
+.dk-notice-track strong{color:var(--dk-txt);font-weight:700}
+@media (max-width:760px){.dk-notice-bar{font-size:11.5px;padding:7px 14px;gap:8px}}
+
+/* 页头 */
+.dk-header{
+  display:flex;
+  align-items:center;
+  gap:26px;
+  padding:0 22px;
+  height:66px;
+  max-width:1280px;
+  margin:0 auto;
+}
+.dk-logo{display:flex;align-items:center;gap:10px;flex:none}
+.dk-logo-mark{
+  width:38px;height:38px;border-radius:10px;
+  background:conic-gradient(from 200deg,#ff3b4e,#b388ff,#4cf0d0,#ff3b4e);
+  display:grid;place-items:center;
+  font-weight:900;font-size:15px;color:#0b0b0e;
+  letter-spacing:-.04em;
+  box-shadow:0 0 0 1px rgba(255,255,255,.08) inset;
+}
+.dk-logo-text{display:flex;flex-direction:column;line-height:1.15}
+.dk-logo-text b{font-size:16px;letter-spacing:.02em}
+.dk-logo-text em{font-style:normal;font-size:10px;color:var(--dk-txt-3);letter-spacing:.22em;text-transform:uppercase}
+.dk-nav{display:flex;gap:2px;flex:1;align-items:center}
+.dk-nav a{
+  padding:7px 13px;border-radius:8px;font-size:13.5px;color:var(--dk-txt-2);
+  transition:.18s;white-space:nowrap;
+}
+.dk-nav a:hover{color:var(--dk-txt);background:var(--dk-bg-3)}
+.dk-head-tools{display:flex;align-items:center;gap:10px;flex:none}
+.dk-search{
+  position:relative;display:flex;align-items:center;
+  background:var(--dk-bg-2);border:1px solid var(--dk-line);
+  border-radius:999px;padding:0 4px 0 13px;height:36px;width:216px;
+  transition:.2s;
+}
+.dk-search:focus-within{border-color:var(--dk-violet);box-shadow:0 0 0 3px var(--dk-violet-soft)}
+.dk-search input{
+  background:none;border:none;outline:none;color:var(--dk-txt);
+  font-size:13px;width:100%;padding:0 6px 0 6px;
+}
+.dk-search input::placeholder{color:var(--dk-txt-3)}
+.dk-search button{
+  width:28px;height:28px;border-radius:50%;flex:none;
+  display:grid;place-items:center;background:var(--dk-line);
+  font-size:13px;color:var(--dk-txt-2);transition:.18s;
+}
+.dk-search button:hover{background:var(--dk-red);color:#fff}
+.dk-search-hint{
+  position:absolute;top:44px;left:0;right:0;
+  background:var(--dk-bg-3);border:1px solid var(--dk-line);
+  border-radius:10px;padding:6px;font-size:12.5px;color:var(--dk-txt-2);
+  display:none;z-index:60;box-shadow:var(--dk-shadow);
+}
+.dk-search-hint.dk-open{display:block}
+.dk-search-hint p{padding:6px 9px;border-radius:6px}
+.dk-search-hint p.dk-hit{background:var(--dk-red-soft);color:var(--dk-txt)}
+.dk-burger{
+  display:none;width:38px;height:38px;border-radius:9px;
+  background:var(--dk-bg-3);border:1px solid var(--dk-line);
+  place-items:center;font-size:16px;
+}
+@media (max-width:1020px){
+  .dk-nav{
+    display:none;position:absolute;top:100%;left:0;right:0;
+    flex-direction:column;align-items:stretch;gap:0;
+    background:var(--dk-bg-2);border-bottom:1px solid var(--dk-line);
+    padding:8px 14px 16px;box-shadow:var(--dk-shadow);
+  }
+  .dk-nav.dk-open{display:flex}
+  .dk-nav a{padding:12px 10px;border-radius:8px;font-size:15px}
+  .dk-burger{display:grid}
+  .dk-search{width:150px}
+}
+@media (max-width:700px){
+  .dk-header{flex-wrap:wrap;height:auto;padding:10px 14px;gap:10px}
+  .dk-search{width:100%;order:3}
+  .dk-head-tools{width:100%;justify-content:space-between}
+  .dk-burger{order:2}
+  .dk-logo{order:1;flex:1}
+}
+
+/* ============ 通用容器 ============ */
+.dk-wrap{max-width:1280px;margin:0 auto;padding:0 22px}
+.dk-section{padding:62px 0}
+.dk-section + .dk-section{border-top:1px solid var(--dk-line-soft)}
+.dk-kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--dk-red);margin-bottom:12px;
+}
+.dk-kicker::before{content:"";width:22px;height:2px;background:var(--dk-red)}
+.dk-h2{font-size:clamp(22px,3vw,32px);letter-spacing:-.01em}
+.dk-h2 .dk-accent{color:var(--dk-violet)}
+.dk-sub{color:var(--dk-txt-2);font-size:14.5px;max-width:760px;margin-top:12px}
+.dk-sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:34px}
+.dk-sec-head .dk-more{
+  font-size:13px;color:var(--dk-txt-2);border-bottom:1px solid var(--dk-line);
+  padding-bottom:2px;transition:.18s;
+}
+.dk-sec-head .dk-more:hover{color:var(--dk-red);border-color:var(--dk-red)}
+.dk-h3{font-size:16.5px}
+
+/* ============ 首屏 5:5 ============ */
+.dk-hero{
+  padding:54px 0 30px;
+  background:
+    radial-gradient(900px 420px at 78% -8%,rgba(179,136,255,.16),transparent 65%),
+    radial-gradient(700px 380px at 8% 110%,rgba(255,59,78,.12),transparent 60%);
+}
+.dk-hero-grid{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:48px;align-items:center;
+}
+.dk-hero-copy h1{
+  font-size:clamp(30px,5.2vw,56px);
+  line-height:1.1;letter-spacing:-.025em;font-weight:900;
+  margin-bottom:20px;
+}
+.dk-hero-copy h1 span{
+  background:linear-gradient(100deg,#ff3b4e,#b388ff 55%,#4cf0d0);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.dk-hero-lead{font-size:15px;color:var(--dk-txt-2);max-width:520px}
+.dk-hero-intro{
+  margin-top:20px;font-size:13.5px;color:var(--dk-txt-3);
+  border-left:2px solid var(--dk-line);padding-left:14px;line-height:1.85;
+}
+.dk-hero-intro strong{color:var(--dk-txt-2);font-weight:600}
+.dk-hero-stats{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;margin:26px 0 24px;
+}
+.dk-stat{
+  background:var(--dk-bg-2);border:1px solid var(--dk-line);
+  border-radius:12px;padding:14px 14px 12px;
+}
+.dk-stat b{display:block;font-size:22px;font-weight:900;letter-spacing:-.02em;color:var(--dk-txt)}
+.dk-stat b em{font-style:normal;font-size:12px;color:var(--dk-violet);margin-left:2px}
+.dk-stat span{font-size:11.5px;color:var(--dk-txt-3);letter-spacing:.04em}
+.dk-hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.dk-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 22px;border-radius:10px;font-size:14px;font-weight:700;
+  transition:.2s;border:1px solid transparent;
+}
+.dk-btn-primary{background:linear-gradient(100deg,#ff3b4e,#ff5f70);color:#fff;box-shadow:0 10px 26px rgba(255,59,78,.28)}
+.dk-btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(255,59,78,.36)}
+.dk-btn-ghost{background:var(--dk-bg-2);border-color:var(--dk-line);color:var(--dk-txt-2)}
+.dk-btn-ghost:hover{border-color:var(--dk-violet);color:var(--dk-txt)}
+.dk-hero-visual{position:relative}
+.dk-hero-frame{
+  border-radius:20px;overflow:hidden;border:1px solid var(--dk-line);
+  box-shadow:var(--dk-shadow);position:relative;background:var(--dk-bg-2);
+}
+.dk-hero-frame img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.dk-hero-badge{
+  position:absolute;top:16px;left:16px;z-index:2;
+  display:inline-flex;align-items:center;gap:7px;
+  background:rgba(11,11,14,.72);border:1px solid var(--dk-line);
+  border-radius:999px;padding:5px 13px;font-size:11.5px;letter-spacing:.08em;
+  color:var(--dk-txt-2);backdrop-filter:blur(6px);
+}
+.dk-hero-badge i{width:7px;height:7px;border-radius:50%;background:var(--dk-red);display:block;animation:dkPulse 1.8s infinite}
+@keyframes dkPulse{0%,100%{opacity:1}50%{opacity:.25}}
+.dk-hero-float{
+  position:absolute;right:-14px;bottom:-18px;
+  background:var(--dk-bg-3);border:1px solid var(--dk-line);
+  border-radius:14px;padding:14px 18px;box-shadow:var(--dk-shadow);
+  max-width:250px;
+}
+.dk-hero-float b{font-size:13px;display:block;margin-bottom:3px}
+.dk-hero-float span{font-size:11.5px;color:var(--dk-txt-3);line-height:1.5;display:block}
+@media (max-width:900px){
+  .dk-hero-grid{grid-template-columns:1fr;gap:32px}
+  .dk-hero-float{right:6px;bottom:-10px;max-width:220px}
+}
+
+/* ============ 视频焦点 ============ */
+.dk-focus-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:26px}
+.dk-focus-main{
+  position:relative;border-radius:var(--dk-radius);overflow:hidden;
+  border:1px solid var(--dk-line);background:var(--dk-bg-2);
+  transition:.22s;
+}
+.dk-focus-main:hover{border-color:rgba(255,59,78,.5);transform:translateY(-3px);box-shadow:var(--dk-shadow)}
+.dk-focus-main img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.dk-focus-body{padding:20px 22px 22px}
+.dk-tagrow{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px}
+.dk-tag{
+  font-size:11px;padding:2px 9px;border-radius:999px;
+  background:var(--dk-violet-soft);color:var(--dk-violet);border:1px solid rgba(179,136,255,.28);
+  letter-spacing:.03em;
+}
+.dk-tag.dk-red{background:var(--dk-red-soft);color:var(--dk-red);border-color:rgba(255,59,78,.3)}
+.dk-tag.dk-cyan{background:rgba(76,240,208,.1);color:var(--dk-cyan);border-color:rgba(76,240,208,.26)}
+.dk-focus-body h3{font-size:19px;margin-bottom:9px;line-height:1.4}
+.dk-focus-body p{font-size:13.5px;color:var(--dk-txt-2)}
+.dk-vidlist{display:flex;flex-direction:column;gap:0}
+.dk-viditem{
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;
+  padding:16px 4px;border-bottom:1px solid var(--dk-line-soft);
+  align-items:start;transition:.18s;
+}
+.dk-viditem:first-child{padding-top:0}
+.dk-viditem:last-child{border-bottom:none}
+.dk-viditem:hover{background:rgba(255,255,255,.02)}
+.dk-viditem h4{font-size:14.5px;font-weight:700;margin-bottom:5px;line-height:1.45}
+.dk-viditem p{font-size:12.5px;color:var(--dk-txt-3);margin-bottom:8px}
+.dk-vidmeta{display:flex;gap:12px;flex-wrap:wrap;font-size:11.5px;color:var(--dk-txt-3)}
+.dk-vidmeta b{color:var(--dk-txt-2);font-weight:600}
+.dk-vidtools{display:flex;flex-direction:column;gap:6px;align-items:flex-end}
+.dk-mini-btn{
+  font-size:11.5px;padding:3px 10px;border-radius:999px;
+  border:1px solid var(--dk-line);color:var(--dk-txt-3);transition:.18s;
+  white-space:nowrap;
+}
+.dk-mini-btn:hover{border-color:var(--dk-violet);color:var(--dk-violet)}
+.dk-mini-btn.dk-on{background:var(--dk-violet-soft);border-color:var(--dk-violet);color:var(--dk-violet)}
+.dk-likes{
+  display:inline-flex;align-items:center;gap:4px;font-size:11.5px;
+  color:var(--dk-txt-3);border:1px solid var(--dk-line);border-radius:999px;
+  padding:3px 10px;transition:.18s;
+}
+.dk-likes:hover{color:var(--dk-red);border-color:var(--dk-red)}
+.dk-likes.dk-liked{color:var(--dk-red);border-color:var(--dk-red);background:var(--dk-red-soft)}
+@media (max-width:840px){.dk-focus-grid{grid-template-columns:1fr}}
+
+/* ============ 关键词解析 ============ */
+.dk-deep{
+  background:linear-gradient(180deg,var(--dk-bg-2),var(--dk-bg));
+  border:1px solid var(--dk-line);border-radius:18px;
+  padding:36px 34px 32px;
+}
+.dk-deep-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:26px}
+.dk-deep .dk-h3{margin:26px 0 10px;color:var(--dk-txt);display:flex;align-items:center;gap:10px}
+.dk-deep .dk-h3::before{content:"";width:5px;height:16px;border-radius:2px;background:linear-gradient(180deg,#ff3b4e,#b388ff)}
+.dk-deep p{font-size:14px;color:var(--dk-txt-2);text-indent:0}
+.dk-deep p + p{margin-top:12px}
+.dk-deep strong{color:var(--dk-txt);font-weight:700}
+.dk-deep-quote{
+  margin:24px 0;padding:18px 22px;border-radius:12px;
+  background:var(--dk-bg-3);border-left:3px solid var(--dk-violet);
+  font-size:13.5px;color:var(--dk-txt-2);
+}
+.dk-deep-quote b{color:var(--dk-violet);display:block;margin-bottom:5px;font-size:12px;letter-spacing:.14em}
+@media (max-width:700px){.dk-deep{padding:26px 20px}}
+
+/* ============ 专题 ============ */
+.dk-special-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.dk-special{
+  background:var(--dk-bg-2);border:1px solid var(--dk-line);border-radius:var(--dk-radius);
+  padding:22px;display:flex;flex-direction:column;gap:12px;transition:.2s;
+}
+.dk-special:hover{border-color:rgba(179,136,255,.45);transform:translateY(-3px)}
+.dk-special-state{
+  align-self:flex-start;font-size:10.5px;letter-spacing:.12em;font-weight:800;
+  padding:2px 9px;border-radius:4px;
+}
+.dk-special-state.dk-live{background:var(--dk-red-soft);color:var(--dk-red)}
+.dk-special-state.dk-soon{background:var(--dk-bg-3);color:var(--dk-txt-3);border:1px solid var(--dk-line)}
+.dk-special h3{font-size:16px}
+.dk-special > p{font-size:12.5px;color:var(--dk-txt-3)}
+.dk-special ul{display:flex;flex-direction:column;gap:7px;margin-top:2px}
+.dk-special li{
+  font-size:12.5px;color:var(--dk-txt-2);padding-left:14px;position:relative;
+  line-height:1.5;
+}
+.dk-special li::before{content:"";position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--dk-violet)}
+.dk-special img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;border:1px solid var(--dk-line-soft)}
+@media (max-width:900px){.dk-special-grid{grid-template-columns:1fr}}
+
+/* ============ 作者 ============ */
+.dk-authors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.dk-author{
+  display:grid;grid-template-columns:60px minmax(0,1fr);gap:16px;
+  background:var(--dk-bg-2);border:1px solid var(--dk-line);border-radius:var(--dk-radius);
+  padding:20px;transition:.2s;cursor:pointer;
+}
+.dk-author:hover{border-color:rgba(76,240,208,.4);background:var(--dk-bg-3)}
+.dk-avatar{
+  width:60px;height:60px;border-radius:50%;display:grid;place-items:center;
+  font-weight:900;font-size:20px;color:#0b0b0e;letter-spacing:-.03em;
+  border:2px solid rgba(255,255,255,.1);
+}
+.dk-avatar.dk-a1{background:linear-gradient(140deg,#ff3b4e,#b388ff)}
+.dk-avatar.dk-a2{background:linear-gradient(140deg,#4cf0d0,#3d7bff)}
+.dk-avatar.dk-a3{background:linear-gradient(140deg,#ffb648,#ff3b4e)}
+.dk-avatar.dk-a4{background:linear-gradient(140deg,#b388ff,#4cf0d0)}
+.dk-avatar.dk-a5{background:linear-gradient(140deg,#ff5f70,#ffb648)}
+.dk-avatar.dk-a6{background:linear-gradient(140deg,#3d7bff,#b388ff)}
+.dk-author-name{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px}
+.dk-author-name b{font-size:15px}
+.dk-author-field{font-size:11.5px;color:var(--dk-cyan);letter-spacing:.04em}
+.dk-author-data{display:flex;gap:14px;font-size:11.5px;color:var(--dk-txt-3);margin:7px 0 8px;flex-wrap:wrap}
+.dk-author-data b{color:var(--dk-txt-2);font-weight:700}
+.dk-author p{font-size:12.5px;color:var(--dk-txt-3);line-height:1.65}
+@media (max-width:760px){.dk-authors{grid-template-columns:1fr}}
+
+/* ============ 榜单 ============ */
+.dk-rank-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px}
+.dk-rankbox{background:var(--dk-bg-2);border:1px solid var(--dk-line);border-radius:var(--dk-radius);padding:22px}
+.dk-rankbox h3{font-size:15px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center}
+.dk-rankbox h3 span{font-size:11px;color:var(--dk-txt-3);font-weight:400;letter-spacing:.08em}
+.dk-rankrow{
+  display:grid;grid-template-columns:26px minmax(0,1fr) auto;gap:10px;
+  align-items:center;padding:10px 0;border-bottom:1px dashed var(--dk-line-soft);
+  font-size:13px;
+}
+.dk-rankrow:last-child{border-bottom:none}
+.dk-rankrow em{font-style:normal;font-weight:900;font-size:13px;color:var(--dk-txt-3);text-align:center}
+.dk-rankrow:nth-child(1) em{color:#ffb648}
+.dk-rankrow:nth-child(2) em{color:#c3c9d4}
+.dk-rankrow:nth-child(3) em{color:#c98a5b}
+.dk-rankrow .dk-rtitle{color:var(--dk-txt-2);line-height:1.45}
+.dk-rankrow .dk-rscore{font-size:11.5px;color:var(--dk-red);font-weight:700;letter-spacing:.03em}
+@media (max-width:820px){.dk-rank-grid{grid-template-columns:1fr}}
+
+/* ============ 评价 ============ */
+.dk-reviews{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.dk-review{
+  background:var(--dk-bg-2);border:1px solid var(--dk-line);border-radius:12px;
+  padding:18px 20px;display:flex;flex-direction:column;gap:9px;transition:.18s;
+}
+.dk-review:hover{border-color:var(--dk-line);background:var(--dk-bg-3)}
+.dk-review-head{display:flex;align-items:center;gap:10px}
+.dk-review-head .dk-avatar{width:36px;height:36px;font-size:13px;border-width:1px}
+.dk-review-head b{font-size:13px;display:block}
+.dk-review-head span{font-size:10.5px;color:var(--dk-txt-3)}
+.dk-stars{color:#ffb648;font-size:11.5px;letter-spacing:.14em;margin-left:auto}
+.dk-review p{font-size:13px;color:var(--dk-txt-2);line-height:1.7}
+.dk-review .dk-review-meta{font-size:10.5px;color:var(--dk-txt-3);display:flex;gap:12px;flex-wrap:wrap}
+@media (max-width:760px){.dk-reviews{grid-template-columns:1fr}}
+
+/* ============ FAQ ============ */
+.dk-faq{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;max-width:900px}
+.dk-faq details{
+  background:var(--dk-bg-2);border:1px solid var(--dk-line);border-radius:11px;
+  padding:0 20px;transition:.18s;
+}
+.dk-faq details[open]{border-color:rgba(179,136,255,.4);background:var(--dk-bg-3)}
+.dk-faq summary{
+  list-style:none;cursor:pointer;padding:16px 0;font-size:14px;font-weight:700;
+  display:flex;justify-content:space-between;align-items:center;gap:14px;
+}
+.dk-faq summary::-webkit-details-marker{display:none}
+.dk-faq summary::after{content:"+";font-size:18px;color:var(--dk-violet);font-weight:400;transition:.2s;flex:none}
+.dk-faq details[open] summary::after{content:"−";color:var(--dk-red)}
+.dk-faq details p{padding:0 0 16px;font-size:13px;color:var(--dk-txt-2);max-width:800px}
+
+/* ============ 动态/合作 ============ */
+.dk-split{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:24px}
+.dk-news{display:flex;flex-direction:column;gap:0}
+.dk-newsitem{display:grid;grid-template-columns:74px minmax(0,1fr);gap:14px;padding:14px 0;border-bottom:1px solid var(--dk-line-soft);align-items:start}
+.dk-newsitem:last-child{border-bottom:none}
+.dk-newsitem time{font-size:11px;color:var(--dk-txt-3);letter-spacing:.05em;padding-top:3px}
+.dk-newsitem b{font-size:13.5px;display:block;margin-bottom:4px}
+.dk-newsitem p{font-size:12px;color:var(--dk-txt-3)}
+.dk-partners{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.dk-partner{
+  border:1px solid var(--dk-line);border-radius:10px;padding:15px 14px;
+  background:var(--dk-bg-2);font-size:12.5px;color:var(--dk-txt-2);
+  display:flex;align-items:center;gap:9px;transition:.18s;
+}
+.dk-partner:hover{border-color:var(--dk-violet);color:var(--dk-txt)}
+.dk-partner i{
+  width:24px;height:24px;border-radius:6px;flex:none;
+  background:linear-gradient(140deg,#ff3b4e,#b388ff);
+  display:grid;place-items:center;font-style:normal;font-size:11px;font-weight:900;color:#0b0b0e;
+}
+@media (max-width:820px){.dk-split{grid-template-columns:1fr}}
+
+/* ============ 页脚 ============ */
+.dk-footer{
+  border-top:1px solid var(--dk-line);
+  background:var(--dk-bg-2);
+  padding:52px 0 26px;margin-top:20px;
+}
+.dk-foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:34px}
+.dk-foot-brand p{font-size:12.5px;color:var(--dk-txt-3);margin-top:14px;max-width:320px;line-height:1.8}
+.dk-foot-col h4{font-size:12px;letter-spacing:.16em;color:var(--dk-txt);margin-bottom:14px;text-transform:uppercase}
+.dk-foot-col a,.dk-foot-col span{display:block;font-size:12.5px;color:var(--dk-txt-3);margin-bottom:9px;transition:.18s}
+.dk-foot-col a:hover{color:var(--dk-red)}
+.dk-foot-bottom{
+  margin-top:38px;padding-top:20px;border-top:1px solid var(--dk-line-soft);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:11.5px;color:var(--dk-txt-3);letter-spacing:.03em;
+}
+.dk-foot-bottom span{color:var(--dk-txt-3)}
+@media (max-width:900px){.dk-foot-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.dk-foot-grid{grid-template-columns:1fr}}
+
+/* ============ Toast & 浮层 ============ */
+.dk-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+  background:var(--dk-bg-3);border:1px solid var(--dk-line);
+  color:var(--dk-txt);font-size:13px;padding:11px 22px;border-radius:999px;
+  box-shadow:var(--dk-shadow);opacity:0;pointer-events:none;transition:.28s;z-index:200;
+  max-width:88vw;text-align:center;
+}
+.dk-toast.dk-show{opacity:1;transform:translate(-50%,0)}
+.dk-modal-mask{
+  position:fixed;inset:0;background:rgba(4,4,7,.78);
+  backdrop-filter:blur(4px);display:none;place-items:center;z-index:150;padding:20px;
+}
+.dk-modal-mask.dk-open{display:grid}
+.dk-modal{
+  width:min(560px,100%);background:var(--dk-bg-2);border:1px solid var(--dk-line);
+  border-radius:16px;padding:26px;box-shadow:var(--dk-shadow);position:relative;
+  max-height:86vh;overflow:auto;
+}
+.dk-modal h3{font-size:18px;margin-bottom:6px;padding-right:30px}
+.dk-modal .dk-modal-sub{font-size:12.5px;color:var(--dk-txt-3);margin-bottom:18px}
+.dk-modal-close{
+  position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:8px;
+  background:var(--dk-bg-3);border:1px solid var(--dk-line);display:grid;place-items:center;
+  font-size:15px;color:var(--dk-txt-2);transition:.18s;
+}
+.dk-modal-close:hover{color:var(--dk-red);border-color:var(--dk-red)}
+.dk-field{margin-bottom:14px}
+.dk-field label{display:block;font-size:11.5px;letter-spacing:.08em;color:var(--dk-txt-3);margin-bottom:6px}
+.dk-field input,.dk-field textarea,.dk-field select{
+  width:100%;background:var(--dk-bg);border:1px solid var(--dk-line);
+  border-radius:9px;padding:10px 13px;color:var(--dk-txt);font-size:13px;
+  font-family:inherit;outline:none;transition:.18s;
+}
+.dk-field input:focus,.dk-field textarea:focus,.dk-field select:focus{border-color:var(--dk-violet);box-shadow:0 0 0 3px var(--dk-violet-soft)}
+.dk-field textarea{resize:vertical;min-height:96px}
+.dk-modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:6px}
+.dk-share-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
+.dk-share-row button{
+  border:1px solid var(--dk-line);border-radius:9px;padding:9px 16px;
+  font-size:12.5px;color:var(--dk-txt-2);background:var(--dk-bg-3);transition:.18s;
+}
+.dk-share-row button:hover{border-color:var(--dk-violet);color:var(--dk-violet)}
+.dk-author-modal .dk-avatar{width:54px;height:54px;font-size:18px}
+.dk-author-modal .dk-am-head{display:flex;gap:14px;align-items:center;margin-bottom:16px}
+.dk-author-modal .dk-am-head b{font-size:16px;display:block}
+.dk-author-modal .dk-am-head span{font-size:11.5px;color:var(--dk-cyan)}
+.dk-author-modal p{font-size:13px;color:var(--dk-txt-2);margin-bottom:12px}
+.dk-author-modal .dk-am-data{display:flex;gap:18px;font-size:12px;color:var(--dk-txt-3);margin-bottom:14px}
+.dk-author-modal .dk-am-data b{color:var(--dk-txt);font-size:14px;display:block}
+
+/* 回到顶部 */
+.dk-top{
+  position:fixed;right:20px;bottom:26px;width:44px;height:44px;border-radius:12px;
+  background:var(--dk-bg-3);border:1px solid var(--dk-line);display:grid;place-items:center;
+  color:var(--dk-txt-2);font-size:17px;z-index:90;opacity:0;pointer-events:none;transition:.25s;
+  box-shadow:var(--dk-shadow);
+}
+.dk-top.dk-show{opacity:1;pointer-events:auto}
+.dk-top:hover{color:var(--dk-red);border-color:var(--dk-red)}
+
+/* 筛选 prompt 小工具 */
+.dk-filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.dk-chip{
+  font-size:12px;padding:5px 14px;border-radius:999px;
+  border:1px solid var(--dk-line);color:var(--dk-txt-3);transition:.18s;background:var(--dk-bg-2);
+}
+.dk-chip.dk-active,.dk-chip:hover{border-color:var(--dk-violet);color:var(--dk-violet);background:var(--dk-violet-soft)}
+.dk-hidden{display:none !important}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<!-- ================= S1 吸顶：公告 + 页头 ================= -->
+<div class="dk-sticky-wrap">
+  <div class="dk-notice-bar" role="region" aria-label="官方公告">
+    <span class="dk-notice-badge">◆ 官方发布</span>
+    <div class="dk-notice-track">
+      <span>「暗黑调色实验室 · 第二季」<strong>11月25日</strong>开放报名，限量 300 席 &nbsp;·&nbsp; 「夜色短片扶持计划」<strong>新增 12 个原创名额</strong>，投稿通道已开启 &nbsp;·&nbsp; 51暗黑网 <strong>企业版创作者中心</strong> 上线公测</span>
+    </div>
+  </div>
+
+  <header class="dk-header">
+    <a class="dk-logo" href="#dk-home" aria-label="51暗黑网首页">
+      <span class="dk-logo-mark">51</span>
+      <span class="dk-logo-text">
+        <b>51暗黑网</b>
+        <em>DARK VIDEO BRAND</em>
+      </span>
+    </a>
+
+    <nav class="dk-nav" id="dkNav" aria-label="主导航">
+      <a href="#dk-home">首屏</a>
+      <a href="#dk-focus">焦点内容</a>
+      <a href="#dk-deep">深度解析</a>
+      <a href="#dk-special">专题企划</a>
+      <a href="#dk-authors">创作者</a>
+      <a href="#dk-rank">数据榜单</a>
+      <a href="#dk-faq">帮助中心</a>
+    </nav>
+
+    <div class="dk-head-tools">
+      <div class="dk-search">
+        <input id="dkSearch" type="search" placeholder="搜索暗黑影像、作者或专题…" aria-label="站内搜索">
+        <button id="dkSearchBtn" aria-label="开始搜索">⌕</button>
+        <div class="dk-search-hint" id="dkSearchHint" role="status"></div>
+      </div>
+      <button class="dk-burger" id="dkBurger" aria-label="展开导航" aria-expanded="false">☰</button>
+    </div>
+  </header>
+</div>
+
+<main>
+  <!-- ================= S2 品牌首屏 ================= -->
+  <section class="dk-hero" id="dk-home">
+    <div class="dk-wrap">
+      <div class="dk-hero-grid">
+        <div class="dk-hero-copy">
+          <div class="dk-kicker">品牌官方网站 · 暗黑美学影像社区</div>
+          <h1>51暗黑网<br><span>把夜色拍成值得被看见的作品</span></h1>
+          <p class="dk-hero-lead">51暗黑网是面向暗黑风格影像创作者的专业视频品牌平台，以原创、正版、高清为内容底线，聚合短片、访谈、调色教程与幕后记录，让每一帧暗调都有表达的力量。</p>
+          <p class="dk-hero-intro">
+            <strong>企业简介：</strong>51暗黑网成立于影像内容社区蓬勃生长的年代，由一支长期深耕垂直领域的内容团队持续运营。品牌以「暗而不冷、黑而有光」为审美主张，为创作者提供上传、分发、交流与商业合作的一体化服务，也为企业提供高品质的视觉内容解决方案。经过多年积累，平台已形成从灵感到成片的完整内容生态，在暗黑风格视频领域建立了值得信赖的口碑。
+          </p>
+          <div class="dk-hero-stats">
+            <div class="dk-stat"><b>1,280<em>+</em></b><span>原创短片累计</span></div>
+            <div class="dk-stat"><b>86<em>万</em></b><span>社区创作者关注</span></div>
+            <div class="dk-stat"><b>4.9<em>/5</em></b><span>用户口碑评分</span></div>
+          </div>
+          <div class="dk-hero-actions">
+            <a class="dk-btn dk-btn-primary" href="#dk-focus">▷ 观看焦点内容</a>
+            <button class="dk-btn dk-btn-ghost" id="dkSubmitOpen" data-dk-open="submit">✎ 我要投稿</button>
+            <a class="dk-btn dk-btn-ghost" href="#dk-authors">认识创作者</a>
+          </div>
+        </div>
+
+        <div class="dk-hero-visual">
+          <div class="dk-hero-frame">
+            <span class="dk-hero-badge"><i></i> 本期主视觉 · 官方发布</span>
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='960' height='720' viewBox='0 0 960 720'%3E%3Cdefs%3E%3ClinearGradient id='sky' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%2307070c'/%3E%3Cstop offset='0.55' stop-color='%231a1030'/%3E%3Cstop offset='1' stop-color='%232a0f24'/%3E%3C/linearGradient%3E%3CradialGradient id='glow' cx='0.62' cy='0.38' r='0.5'%3E%3Cstop offset='0' stop-color='%23ff3b4e' stop-opacity='0.85'/%3E%3Cstop offset='1' stop-color='%23ff3b4e' stop-opacity='0'/%3E%3C/radialGradient%3E%3ClinearGradient id='road' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%230a0a12'/%3E%3Cstop offset='0.5' stop-color='%234d3a86'/%3E%3Cstop offset='1' stop-color='%230a0a12'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='960' height='720' fill='url(%23sky)'/%3E%3Ccircle cx='600' cy='280' r='260' fill='url(%23glow)'/%3E%3Ccircle cx='600' cy='280' r='88' fill='%23ff6474' opacity='0.9'/%3E%3Ccircle cx='600' cy='280' r='150' fill='none' stroke='%23b388ff' stroke-opacity='0.45' stroke-width='2' stroke-dasharray='6 14'/%3E%3Cpath d='M0 470 Q220 420 480 470 T960 460 L960 720 L0 720 Z' fill='%230f0b1c'/%3E%3Cpath d='M370 720 L520 470 L640 470 L830 720 Z' fill='url(%23road)' opacity='0.85'/%3E%3Cg stroke='%23ff3b4e' stroke-width='3' stroke-opacity='0.55'%3E%3Cpath d='M500 490 L470 720'/%3E%3Cpath d='M600 490 L650 720'/%3E%3C/g%3E%3Cg fill='%230a0a12'%3E%3Crect x='90' y='392' width='46' height='150'/%3E%3Crect x='150' y='352' width='30' height='190'/%3E%3Crect x='196' y='420' width='52' height='122'/%3E%3Crect x='268' y='382' width='26' height='160'/%3E%3Crect x='760' y='378' width='40' height='164'/%3E%3Crect x='818' y='340' width='28' height='202'/%3E%3Crect x='864' y='408' width='54' height='134'/%3E%3C/g%3E%3Cg fill='%23ffc36b' opacity='0.85'%3E%3Crect x='100' y='408' width='6' height='9'/%3E%3Crect x='118' y='408' width='6' height='9'/%3E%3Crect x='100' y='430' width='6' height='9'/%3E%3Crect x='206' y='438' width='6' height='9'/%3E%3Crect x='226' y='438' width='6' height='9'/%3E%3Crect x='772' y='398' width='6' height='9'/%3E%3Crect x='792' y='398' width='6' height='9'/%3E%3Crect x='772' y='424' width='6' height='9'/%3E%3C/g%3E%3Cg fill='%23c9b8ff' opacity='0.9'%3E%3Ccircle cx='180' cy='180' r='2'/%3E%3Ccircle cx='300' cy='120' r='1.6'/%3E%3Ccircle cx='760' cy='150' r='2.2'/%3E%3Ccircle cx='850' cy='240' r='1.4'/%3E%3Ccircle cx='420' cy='90' r='1.8'/%3E%3C/g%3E%3C/svg%3E" width="960" height="720" alt="51暗黑网首屏主视觉：暗紫色夜空下延伸的城市暗黑公路与霓虹光源">
+          </div>
+          <div class="dk-hero-float">
+            <b>本周上新 · 高清正版</b>
+            <span>《雨夜第六街》暗调街拍短片，8 分钟完整版已上线</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S3 焦点内容 ================= -->
+  <section class="dk-section" id="dk-focus">
+    <div class="dk-wrap">
+      <div class="dk-sec-head">
+        <div>
+          <div class="dk-kicker">Focus · 焦点内容</div>
+          <h2 class="dk-h2">本周<span class="dk-accent">暗黑影像</span>焦点推荐</h2>
+          <p class="dk-sub">由 51暗黑网编辑团队与社区共同筛选，聚焦值得一看的原创短片与幕后拆解。以下内容均为品牌精品内容，支持高清正版观看。</p>
+        </div>
+        <a class="dk-more" href="#dk-special">查看全部专题 →</a>
+      </div>
+
+      <div class="dk-focus-grid">
+        <article class="dk-focus-main">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='960' height='540' viewBox='0 0 960 540'%3E%3Cdefs%3E%3ClinearGradient id='bg1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23110c1e'/%3E%3Cstop offset='0.6' stop-color='%231c1230'/%3E%3Cstop offset='1' stop-color='%230b0b12'/%3E%3C/linearGradient%3E%3ClinearGradient id='rain' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23b388ff' stop-opacity='0.5'/%3E%3Cstop offset='1' stop-color='%23b388ff' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='960' height='540' fill='url(%23bg1)'/%3E%3Cg stroke='url(%23rain)' stroke-width='2'%3E%3Cpath d='M80 0 L20 240'/%3E%3Cpath d='M180 0 L120 260'/%3E%3Cpath d='M300 0 L250 220'/%3E%3Cpath d='M460 0 L410 250'/%3E%3Cpath d='M600 0 L550 230'/%3E%3Cpath d='M740 0 L690 270'/%3E%3Cpath d='M860 0 L810 240'/%3E%3C/g%3E%3Crect x='0' y='380' width='960' height='160' fill='%2307070c' opacity='0.9'/%3E%3Cg fill='%23ffb648'%3E%3Crect x='150' y='300' width='70' height='80' opacity='0.9'/%3E%3Crect x='340' y='270' width='120' height='110' opacity='0.55'/%3E%3Crect x='620' y='290' width='90' height='90' opacity='0.7'/%3E%3C/g%3E%3Cg fill='%23ff3b4e'%3E%3Ccircle cx='480' cy='200' r='44' opacity='0.25'/%3E%3Ccircle cx='480' cy='200' r='20'/%3E%3C/g%3E%3Cpath d='M465 188 L505 200 L465 212 Z' fill='%23fff'/%3E%3Ctext x='80' y='480' font-family='sans-serif' font-size='22' fill='%23ececf1' font-weight='700' opacity='0.92'%3ERAINY SIXTH STREET%3C/text%3E%3C/svg%3E" width="960" height="540" alt="《雨夜第六街》焦点封面：紫色雨幕中亮起暖光的老街窗口">
+          <div class="dk-focus-body">
+            <div class="dk-tagrow">
+              <span class="dk-tag dk-red">编辑力荐</span>
+              <span class="dk-tag">城市探索</span>
+              <span class="dk-tag dk-cyan">高清正版</span>
+            </div>
+            <h3>《雨夜第六街》：把一条老街的夜晚拍成诗</h3>
+            <p>创作团队用 11 个雨夜蹲守同一路口，记录灯光、积水与行人的偶然关系。本期焦点内容附导演调色思路与拍摄参数拆解，适合关注暗黑调色的创作者参考。作者：夜航阿澈。</p>
+            <div class="dk-vidmeta" style="margin-top:14px">
+              <span>▶ <b>38.6万</b> 播放</span>
+              <span>♥ <b>2.4万</b> 点赞</span>
+              <span>☆ <b>6,712</b> 收藏</span>
+              <span>作者 · 夜航阿澈</span>
+            </div>
+            <div class="dk-hero-actions" style="margin-top:16px">
+              <button class="dk-btn dk-btn-primary" data-dk-open="comment" data-dk-title="《雨夜第六街》：把一条老街的夜晚拍成诗">展开评论</button>
+              <button class="dk-btn dk-btn-ghost" data-dk-copy="1">复制链接</button>
+              <button class="dk-btn dk-btn-ghost" data-dk-open="share">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="dk-vidlist" id="dkVidList">
+          <div class="dk-filter-bar" aria-label="内容标签筛选">
+            <button class="dk-chip dk-active" data-dk-filter="all">全部</button>
+            <button class="dk-chip" data-dk-filter="教程">教程干货</button>
+            <button class="dk-chip" data-dk-filter="访谈">人物访谈</button>
+            <button class="dk-chip" data-dk-filter="幕后">创作幕后</button>
+            <button class="dk-chip" data-dk-filter="城市">城市探索</button>
+          </div>
+
+          <article class="dk-viditem" data-dk-cat="教程">
+            <div>
+              <h4>暗调人像的 3 个布光支点：从测光到反光板</h4>
+              <p>用一台常亮灯完成低调人像，讲清轮廓光、眼神光与暗部保留的取舍。</p>
+              <div class="dk-vidmeta">
+                <span class="dk-tag" style="margin:0">教程干货</span>
+                <span>作者 · 灰阶与光</span>
+                <span>▶ <b>12.9万</b></span>
+              </div>
+            </div>
+            <div class="dk-vidtools">
+              <button class="dk-likes" data-dk-like>♥ <b>8,240</b></button>
+              <button class="dk-mini-btn" data-dk-fav>☆ 收藏</button>
+            </div>
+          </article>
+
+          <article class="dk-viditem" data-dk-cat="访谈">
+            <div>
+              <h4>访谈｜夜航阿澈：暗黑不是冷，是把光留得更少</h4>
+              <p>聊他如何用一支定焦完成整部短片，以及 51暗黑网企业合作项目的取舍。</p>
+              <div class="dk-vidmeta">
+                <span class="dk-tag" style="margin:0">人物访谈</span>
+                <span>作者 · 编辑部</span>
+                <span>▶ <b>9.6万</b></span>
+              </div>
+            </div>
+            <div class="dk-vidtools">
+              <button class="dk-likes" data-dk-like>♥ <b>5,118</b></button>
+              <button class="dk-mini-btn" data-dk-fav>☆ 收藏</button>
+            </div>
+          </article>
+
+          <article class="dk-viditem" data-dk-cat="幕后">
+            <div>
+              <h4>幕后｜一场只有 3 小时的夜景拍摄怎么排期</h4>
+              <p>从勘景到收工完整复盘，含分镜表模板与突发雨天预案。</p>
+              <div class="dk-vidmeta">
+                <span class="dk-tag" style="margin:0">创作幕后</span>
+                <span>作者 · 三号机位</span>
+                <span>▶ <b>7.3万</b></span>
+              </div>
+            </div>
+            <div class="dk-vidtools">
+              <button class="dk-likes" data-dk-like>♥ <b>3,904</b></button>
+              <button class="dk-mini-btn" data-dk-fav>☆ 收藏</button>
+            </div>
+          </article>
+
+          <article class="dk-viditem" data-dk-cat="城市">
+            <div>
+              <h4>城市探索｜午夜菜市场的另一种秩序</h4>
+              <p>凌晨两点的摊位灯光与蒸汽，拍出了一套完整的暗调城市观察记录。</p>
+              <div class="dk-vidmeta">
+                <span class="dk-tag" style="margin:0">城市探索</span>
+                <span>作者 · 拾夜人</span>
+                <span>▶ <b>15.2万</b></span>
+              </div>
+            </div>
+            <div class="dk-vidtools">
+              <button class="dk-likes" data-dk-like>♥ <b>11,206</b></button>
+              <button class="dk-mini-btn" data-dk-fav>☆ 收藏</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S4 深度解析（关键词解析 800+） ================= -->
+  <section class="dk-section" id="dk-deep">
+    <div class="dk-wrap">
+      <div class="dk-sec-head">
+        <div>
+          <div class="dk-kicker">Insight · 关键词解析</div>
+          <h2 class="dk-h2">读懂「51暗黑网」：<span class="dk-accent">暗黑影像</span>的行业观察与品牌内核</h2>
+          <p class="dk-sub">从名称到内容，从创作方法到社区生态，这一节完整拆解 51暗黑网为何成为暗黑风格影像的垂直内容平台。</p>
+        </div>
+      </div>
+
+      <div class="dk-deep">
+        <div class="dk-deep-grid">
+          <div>
+            <h3 class="dk-h3">一、名字里的方向感：为什么是「暗黑」</h3>
+            <p>「51暗黑网」这个名字，五个字符里其实藏了三层意思。<strong>「51」</strong>是平台的起点与工作方法的代号——最早的内容团队只有五个人、一台机器、一条从深夜到凌晨的拍摄时间轴，五加一，意味着最小的完整创作单元；<strong>「暗黑」</strong>不是题材的自我设限，而是一种审美选择的坐标系：低照度、高反差的画面里，光的位置比数量更重要，暗部要留下可以呼吸的细节；<strong>「网」</strong>则是承诺，平台不是一个人的作品集，而是把创作者、观众、企业需求连接起来的内容网络。</p>
+            <p>理解这一点，才能理解 51暗黑网为什么坚持原创与正版。暗黑风格影像很容易滑向粗糙的猎奇，但只要创作者愿意花时间研究光源、研究环境反射、研究人物在阴影里的情绪，暗调就成为一种高级的叙事语言。51暗黑网在内容审核与编辑推荐中，始终把「暗而不糊、黑而有解」作为品质门槛，这也是平台在垂直领域形成口碑的根本原因。</p>
+
+            <div class="dk-deep-quote">
+              <b>品牌理念</b>
+              暗黑不是冷，是把光留得更少，然后用更少的光说更多的话。51暗黑网希望每一部原创短片，都能让观众在暗处看见自己被照亮的瞬间。
+            </div>
+
+            <h3 class="dk-h3">二、从灵感到成片：平台如何支撑一次创作</h3>
+            <p>很多观众以为视频平台的价值止于「看」，但在 51暗黑网的内容生态里，一次完整的创作至少经过五个环节。第一是<strong>灵感采集</strong>：平台的创作灵感页会按季节与场景整理暗调拍摄清单，例如雨夜、隧道、霓虹橱窗、老式楼道，每个场景都附有光线条件与设备建议。第二是<strong>脚本与分镜</strong>：编辑团队会把高赞作品的分镜结构拆解为可复用的模板，并标注情绪节奏点，帮助新人少走弯路。</p>
+            <p>第三是<strong>拍摄与调色</strong>，这是 51暗黑网内容最密集的部分。平台教程区长期更新暗调肤色还原、低照度降噪、曲线压暗与高光回收等实用技巧，所有教程都尽量给出原始素材与参数区间，而不是只讲概念。第四是<strong>上传与分发</strong>，创作者上传的高清正版作品会进入编辑初筛，通过后进入焦点位或专题池，获得更长的曝光周期。第五是<strong>反馈与复盘</strong>：评论区、数据榜单与创作者访谈共同构成反馈回路，让一次创作的经验变成社区可继承的知识。</p>
+
+            <h3 class="dk-h3">三、垂直领域的长期主义：内容品质与社区温度</h3>
+            <p>在一个注意力快速迁移的时代，做垂直内容平台需要耐心。51暗黑网的企业团队把「持续运营」写进了品牌规则：每周固定更新焦点内容，每月固定上线一个专题企划，每季度开放一次扶持计划报名。这种节奏看起来保守，却让社区形成了稳定的创作预期——创作者知道什么时候投稿更容易被看见，观众知道什么时候回来会有新的精品内容。</p>
+            <p>品质的另一面是温度。暗黑影像常被误解为疏离，但 51暗黑网的评论区里有大量真实的陪伴：有人在下夜班后看完一部短片说「像有人在旁边坐了一会」，有人把自己拍失败的素材发出来，收到十几条具体的技术建议。平台坚持用户至上，不做引战式流量推荐，把互动留给真正讨论画面与情绪的人。这种包容而真实的气氛，正是 51暗黑网作为品牌官方网站最想传递的价值，也是它在行业内保持影响力与社会责任感的底气。我们相信，好的暗黑影像不制造恐惧，而是给夜晚一点温柔的秩序感。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S5 专题企划 ================= -->
+  <section class="dk-section" id="dk-special">
+    <div class="dk-wrap">
+      <div class="dk-sec-head">
+        <div>
+          <div class="dk-kicker">Special · 专题企划</div>
+          <h2 class="dk-h2">三组进行中的<span class="dk-accent">品牌企划</span></h2>
+          <p class="dk-sub">专题是 51暗黑网组织内容的方式，也是创作者集中亮相的舞台。每个专题都由编辑与社区共创，持续更新。</p>
+        </div>
+      </div>
+
+      <div class="dk-special-grid">
+        <article class="dk-special">
+          <span class="dk-special-state dk-live">更新中 · 第 6 期</span>
+          <h3>夜色短片扶持计划</h3>
+          <p>面向新锐创作者的原创短片扶持企划，提供拍摄支持与官方发布资源。</p>
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='360' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%230e0b18'/%3E%3Cpath d='M0 300 L180 180 L320 250 L470 150 L640 230 L640 360 L0 360 Z' fill='%231b1430'/%3E%3Cg fill='%23ff3b4e' opacity='0.8'%3E%3Crect x='120' y='210' width='8' height='60'/%3E%3Crect x='140' y='190' width='8' height='80'/%3E%3Crect x='500' y='200' width='8' height='70'/%3E%3C/g%3E%3Ccircle cx='360' cy='130' r='70' fill='none' stroke='%23b388ff' stroke-width='2' stroke-dasharray='5 12'/%3E%3Ccircle cx='360' cy='130' r='36' fill='%23b388ff' opacity='0.25'/%3E%3Ctext x='40' y='60' font-family='sans-serif' font-size='20' fill='%23ececf1' font-weight='700'%3EDARK SHORT FILM%3C/text%3E%3C/svg%3E" width="640" height="360" alt="夜色短片扶持计划专题：月夜山脊与发光的路灯剪影">
+          <ul>
+            <li>《末班地铁的第十二节车厢》— 8 分 40 秒 · 已上线</li>
+            <li>《旧灯塔值班记录》— 12 分 05 秒 · 已上线</li>
+            <li>《巷口的第七盏灯》— 6 分 22 秒 · 本周五首播</li>
+          </ul>
+        </article>
+
+        <article class="dk-special">
+          <span class="dk-special-state dk-live">更新中 · 第 3 期</span>
+          <h3>暗黑调色实验室</h3>
+          <p>围绕调色台展开的系列教程，从曲线到分离色调，全部配原始素材。</p>
+          <ul>
+            <li>暗部偏青还是偏紫？一次实测对比</li>
+            <li>低照度素材的降噪与保细节顺序</li>
+            <li>用 LUT 还是手调？创作者真实工作流</li>
+          </ul>
+          <p style="font-size:11.5px;color:var(--dk-txt-3)">开放报名 · 11月25日 20:00 线上直播</p>
+        </article>
+
+        <article class="dk-special">
+          <span class="dk-special-state dk-soon">筹备中 · 第 1 期</span>
+          <h3>午夜城市影像档案</h3>
+          <p>以城市午夜为坐标的长期记录企划，鼓励在地创作者提交街区影像。</p>
+          <ul>
+            <li>《桥下理发店》— 在地文化 · 已收稿</li>
+            <li>《24 小时洗衣房的灯》— 日常记录 · 审片中</li>
+            <li>《红眼航班落地之后》— 城市探索 · 征集中</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S6 创作者矩阵 ================= -->
+  <section class="dk-section" id="dk-authors">
+    <div class="dk-wrap">
+      <div class="dk-sec-head">
+        <div>
+          <div class="dk-kicker">Creators · 创作者矩阵</div>
+          <h2 class="dk-h2">支撑 51暗黑网<span class="dk-accent">内容生态</span>的创作者</h2>
+          <p class="dk-sub">六位长期活跃的社区作者，覆盖调色、布光、城市记录、访谈与后期声音。点击卡片查看完整档案。</p>
+        </div>
+      </div>
+
+      <div class="dk-authors" id="dkAuthors">
+        <article class="dk-author" data-dk-author="0" tabindex="0">
+          <div class="dk-avatar dk-a1">澈</div>
+          <div>
+            <div class="dk-author-name"><b>夜航阿澈</b><span class="dk-author-field">城市暗调 · 导演</span></div>
+            <div class="dk-author-data"><span>作品 <b>86</b></span><span>关注者 <b>24.8万</b></span></div>
+            <p>坚持用定焦拍夜景的城市导演，擅长在雨、雾与霓虹之间找秩序。作品节奏克制，偏爱长镜头与实景光，常年在 51暗黑网更新街拍短片与拍摄笔记。</p>
+          </div>
+        </article>
+
+        <article class="dk-author" data-dk-author="1" tabindex="0">
+          <div class="dk-avatar dk-a2">灰</div>
+          <div>
+            <div class="dk-author-name"><b>灰阶与光</b><span class="dk-author-field">布光 · 教程</span></div>
+            <div class="dk-author-data"><span>作品 <b>142</b></span><span>关注者 <b>31.2万</b></span></div>
+            <p>低调人像布光教学创作者，讲参数也讲取舍。系列教程《一支灯拍暗调》累计播放超百万，被社区称为入门暗黑影像的必修课，内容持续在官网更新。</p>
+          </div>
+        </article>
+
+        <article class="dk-author" data-dk-author="2" tabindex="0">
+          <div class="dk-avatar dk-a3">拾</div>
+          <div>
+            <div class="dk-author-name"><b>拾夜人</b><span class="dk-author-field">城市探索 · 纪录</span></div>
+            <div class="dk-author-data"><span>作品 <b>59</b></span><span>关注者 <b>18.6万</b></span></div>
+            <p>专门在午夜出没的记录者，拍过菜市场、修车铺与凌晨的公交总站。他认为城市的真实藏在灯光照不到的地方，作品常配自采环境声，质感真实而有温度。</p>
+          </div>
+        </article>
+
+        <article class="dk-author" data-dk-author="3" tabindex="0">
+          <div class="dk-avatar dk-a4">机</div>
+          <div>
+            <div class="dk-author-name"><b>三号机位</b><span class="dk-author-field">幕后 · 制片</span></div>
+            <div class="dk-author-data"><span>作品 <b>73</b></span><span>关注者 <b>15.9万</b></span></div>
+            <p>从制片视角复盘拍摄现场，擅长把混乱的排期讲得清楚。分享分镜表、通告单与突发情况预案，是很多团队开机前必看的幕后作者，也是平台合作讲师。</p>
+          </div>
+        </article>
+
+        <article class="dk-author" data-dk-author="4" tabindex="0">
+          <div class="dk-avatar dk-a5">声</div>
+          <div>
+            <div class="dk-author-name"><b>低频声场</b><span class="dk-author-field">声音设计</span></div>
+            <div class="dk-author-data"><span>作品 <b>41</b></span><span>关注者 <b>9.7万</b></span></div>
+            <p>专注暗黑短片的声音设计，擅长用环境音与低频铺情绪。教程《把安静做出层次》被大量收藏，同时为社区创作者提供混音建议，风格耐心细致。</p>
+          </div>
+        </article>
+
+        <article class="dk-author" data-dk-author="5" tabindex="0">
+          <div class="dk-avatar dk-a6">帧</div>
+          <div>
+            <div class="dk-author-name"><b>一帧不剪</b><span class="dk-author-field">访谈 · 影评</span></div>
+            <div class="dk-author-data"><span>作品 <b>98</b></span><span>关注者 <b>12.4万</b></span></div>
+            <p>以长访谈和画面细读见长的内容作者，常与导演聊创作动机与失败经验。文字扎实，问题犀利，是 51暗黑网品牌故事栏目的常驻作者之一。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S7 数据榜单 ================= -->
+  <section class="dk-section" id="dk-rank">
+    <div class="dk-wrap">
+      <div class="dk-sec-head">
+        <div>
+          <div class="dk-kicker">Ranking · 数据榜单</div>
+          <h2 class="dk-h2">热度、口碑与新人，<span class="dk-accent">每周更新</span></h2>
+          <p class="dk-sub">榜单来自真实播放与互动数据，兼顾口碑与成长性，为观众提供参考，也为创作者提供方向。</p>
+        </div>
+      </div>
+
+      <div class="dk-rank-grid">
+        <div class="dk-rankbox">
+          <h3>本周热度榜 <span>TOP 5</span></h3>
+          <div class="dk-rankrow"><em>1</em><span class="dk-rtitle">《末班地铁的第十二节车厢》</span><span class="dk-rscore">98.6</span></div>
+          <div class="dk-rankrow"><em>2</em><span class="dk-rtitle">《雨夜第六街》</span><span class="dk-rscore">96.1</span></div>
+          <div class="dk-rankrow"><em>3</em><span class="dk-rtitle">《旧灯塔值班记录》</span><span class="dk-rscore">94.4</span></div>
+          <div class="dk-rankrow"><em>4</em><span class="dk-rtitle">《午夜菜市场的另一种秩序》</span><span class="dk-rscore">92.8</span></div>
+          <div class="dk-rankrow"><em>5</em><span class="dk-rtitle">《巷口的第七盏灯》</span><span class="dk-rscore">91.2</span></div>
+        </div>
+
+        <div class="dk-rankbox">
+          <h3>口碑与新人榜 <span>综合</span></h3>
+          <div class="dk-rankrow"><em>★</em><span class="dk-rtitle">灰阶与光 · 教程《一支灯拍暗调》口碑 4.9</span><span class="dk-rscore">4.9</span></div>
+          <div class="dk-rankrow"><em>★</em><span class="dk-rtitle">夜航阿澈 · 城市短片系列口碑 4.8</span><span class="dk-rscore">4.8</span></div>
+          <div class="dk-rankrow"><em>新</em><span class="dk-rtitle">新人作者「凌晨四点」· 首作《楼下便利店》</span><span class="dk-rscore">88.3</span></div>
+          <div class="dk-rankrow"><em>新</em><span class="dk-rtitle">新人作者「雾灯」· 首作《桥洞回声》</span><span class="dk-rscore">86.7</span></div>
+          <div class="dk-rankrow"><em>新</em><span class="dk-rtitle">新人作者「K-17」· 首作《夜班保安日记》</span><span class="dk-rscore">85.2</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S6 用户评价 ================= -->
+  <section class="dk-section" id="dk-reviews">
+    <div class="dk-wrap">
+      <div class="dk-sec-head">
+        <div>
+          <div class="dk-kicker">Voice · 用户评价</div>
+          <h2 class="dk-h2">来自社区的<span class="dk-accent">真实声音</span></h2>
+          <p class="dk-sub">这些评价来自长期使用 51暗黑网观看与创作的观众和作者，语气不同，感受各异。</p>
+        </div>
+      </div>
+
+      <div class="dk-reviews">
+        <article class="dk-review">
+          <div class="dk-review-head">
+            <div class="dk-avatar dk-a2">林</div>
+            <div><b>林间有雾</b><span>观众 · 关注 1 年</span></div>
+            <div class="dk-stars">★★★★★</div>
+          </div>
+          <p>我是做平面设计的，对画面很敏感。51暗黑网最难得的是暗部不脏，很多平台压暗之后全是色块，这里的高清正版片源明显更干净，晚上看很舒服。</p>
+          <div class="dk-review-meta"><span>观看 48 部</span><span>收藏 12 部</span></div>
+        </article>
+
+        <article class="dk-review">
+          <div class="dk-review-head">
+            <div class="dk-avatar dk-a1">周</div>
+            <div><b>周末不开灯</b><span>创作者 · 投稿 9 次</span></div>
+            <div class="dk-stars">★★★★★</div>
+          </div>
+          <p>第一次投稿就被编辑回复了具体建议，指出我暗部层次不够，还推了两节教程。后来那部片子重剪后再投，上了专题。这种反馈在其他平台很难遇到。</p>
+          <div class="dk-review-meta"><span>作品 9 部</span><span>1 部入选专题</span></div>
+        </article>
+
+        <article class="dk-review">
+          <div class="dk-review-head">
+            <div class="dk-avatar dk-a3">陈</div>
+            <div><b>陈小满</b><span>观众 · 夜班族</span></div>
+            <div class="dk-stars">★★★★☆</div>
+          </div>
+          <p>下夜班回家会挑一部短片看。内容很真实，不吵。唯一建议是希望专题页能有个“看到哪了”的记录，有时候追更容易忘。</p>
+          <div class="dk-review-meta"><span>观看 120+ 部</span><span>建议 1 条</span></div>
+        </article>
+
+        <article class="dk-review">
+          <div class="dk-review-head">
+            <div class="dk-avatar dk-a4">海</div>
+            <div><b>海边第七排</b><span>设备党 · 关注 8 个月</span></div>
+            <div class="dk-stars">★★★★★</div>
+          </div>
+          <p>教程区是真的干货。布光那组教程把参数和反光板位置都写清楚了，我照着拍了一条，同事都问我在哪学的。希望多出点声音设计的实战。</p>
+          <div class="dk-review-meta"><span>收藏 26 篇</span><span>实操 5 次</span></div>
+        </article>
+
+        <article class="dk-review">
+          <div class="dk-review-head">
+            <div class="dk-avatar dk-a5">南</div>
+            <div><b>南桥不夜</b><span>在地记录者</span></div>
+            <div class="dk-stars">★★★★☆</div>
+          </div>
+          <p>作为小城市创作者，本来担心题材没人看。投稿后编辑帮我梳理了重点，还进了“午夜城市影像档案”的征集，第一次感觉自己的夜晚被认真对待。</p>
+          <div class="dk-review-meta"><span>投稿 4 次</span><span>2 次获推荐</span></div>
+        </article>
+
+        <article class="dk-review">
+          <div class="dk-review-head">
+            <div class="dk-avatar dk-a6">阿</div>
+            <div><b>阿普照旧</b><span>学生 · 影视专业</span></div>
+            <div class="dk-stars">★★★★★</div>
+          </div>
+          <p>学校作业要拍低调短片，我把 51暗黑网的访谈都刷了一遍。创作者讲失败经验的部分特别有用，比只看成片有收获，口碑好确实有原因。</p>
+          <div class="dk-review-meta"><span>观看 60+ 部</span><span>做笔记 3 本</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S7 动态 · 合作 · FAQ ================= -->
+  <section class="dk-section" id="dk-faq">
+    <div class="dk-wrap">
+      <div class="dk-sec-head">
+        <div>
+          <div class="dk-kicker">Support · 企业动态与帮助</div>
+          <h2 class="dk-h2">品牌动态、合作与<span class="dk-accent">常见问题</span></h2>
+          <p class="dk-sub">51暗黑网持续运营中，官方发布与社区活动都会在这里同步，帮助中心整理了投稿与观看的高频问题。</p>
+        </div>
+      </div>
+
+      <div class="dk-split">
+        <div class="dk-rankbox">
+          <h3 style="font-size:15px;margin-bottom:14px">企业动态 · 官方发布</h3>
+          <div class="dk-news">
+            <div class="dk-newsitem">
+              <time>2026.11.18</time>
+              <div><b>「暗黑调色实验室」第二季开放报名</b><p>面向所有注册创作者，限额 300 席，含 4 节直播与 1 次作品点评。</p></div>
+            </div>
+            <div class="dk-newsitem">
+              <time>2026.11.12</time>
+              <div><b>企业版创作者中心上线公测</b><p>支持团队协作、素材版本管理与多账号分发，欢迎品牌方申请试用。</p></div>
+            </div>
+            <div class="dk-newsitem">
+              <time>2026.11.05</time>
+              <div><b>「夜色短片扶持计划」新增 12 个原创名额</b><p>入选作品将获得官方发布资源与高清正版推荐位。</p></div>
+            </div>
+            <div class="dk-newsitem">
+              <time>2026.10.27</time>
+              <div><b>社区内容规范更新公告</b><p>强化原创声明与素材授权提示，持续维护值得信赖的内容生态。</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dk-rankbox">
+          <h3 style="font-size:15px;margin-bottom:14px">合作品牌与伙伴</h3>
+          <div class="dk-partners">
+            <div class="dk-partner"><i>影</i>影调器材工作室</div>
+            <div class="dk-partner"><i>光</i>光域影像设备</div>
+            <div class="dk-partner"><i>声</i>声场音频实验室</div>
+            <div class="dk-partner"><i>城</i>城市文化影像基金</div>
+            <div class="dk-partner"><i>夜</i>夜色放映联盟</div>
+            <div class="dk-partner"><i>帧</i>帧率后期学院</div>
+          </div>
+          <p style="font-size:11.5px;color:var(--dk-txt-3);margin-top:16px;line-height:1.7">合作垂询请通过投稿入口留言，注明「企业合作」。51暗黑网为合作方提供品牌短片定制、专题共建与创作者联动等多元方案。</p>
+        </div>
+      </div>
+
+      <div style="margin-top:30px">
+        <h3 class="dk-h3" style="margin-bottom:16px">常见问题</h3>
+        <div class="dk-faq">
+          <details open>
+            <summary>如何向 51暗黑网投稿原创短片？</summary>
+            <p>点击页面中的「我要投稿」按钮，填写作品标题、时长、创作说明与素材授权信息即可提交。我们建议附上 1 分钟以内的预览片段，审核周期通常为 3 至 7 个工作日，通过后会以站内消息通知。</p>
+          </details>
+          <details>
+            <summary>平台对「原创」的判定标准是什么？</summary>
+            <p>画面、声音与剪辑需由投稿者本人或团队完成，使用第三方素材须提供授权或符合可商用范围。51暗黑网坚持正版与原创，若发现搬运或未授权素材，会先下架并通知作者补充说明。</p>
+          </details>
+          <details>
+            <summary>观看高清正版内容需要付费吗？</summary>
+            <p>目前大部分原创短片对社区开放免费观看，部分企划联合内容可能采用限时放映形式。所有付费或限时内容都会清晰标注，不做诱导式消费，用户至上是我们持续运营的原则。</p>
+          </details>
+          <details>
+            <summary>「夜色短片扶持计划」怎么报名？</summary>
+            <p>在专题页找到对应期数，提交完整脚本或粗剪版本即可报名。评选关注创意、完成度与暗调影像表达能力，入选团队将获得拍摄支持与官方发布推荐位。</p>
+          </details>
+          <details>
+            <summary>企业或品牌方如何寻求内容合作？</summary>
+            <p>可通过投稿入口留言并选择「企业合作」，简要说明项目类型、上线时间与预算区间。我们的内容团队会评估题材匹配度，并提供从脚本共创到成片分发的多元合作方式。</p>
+          </details>
+          <details>
+            <summary>评论区有哪些社区规范？</summary>
+            <p>请围绕作品本身讨论，尊重创作者与他人。禁止引战、人身攻击与广告刷屏。51暗黑网希望评论区是温暖而有信息量的地方，违规内容会被折叠或删除。</p>
+          </details>
+          <details>
+            <summary>作品上线后可以修改标题或封面吗？</summary>
+            <p>可以。在创作者中心提交修改申请，编辑确认后即可更新。已入选焦点或专题的作品，建议修改前与内容编辑沟通，避免影响专题页面的整体呈现。</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= S8 页脚 ================= -->
+<footer class="dk-footer">
+  <div class="dk-wrap">
+    <div class="dk-foot-grid">
+      <div class="dk-foot-brand">
+        <a class="dk-logo" href="#dk-home" aria-label="返回 51暗黑网首屏">
+          <span class="dk-logo-mark">51</span>
+          <span class="dk-logo-text"><b>51暗黑网</b><em>DARK VIDEO BRAND</em></span>
+        </a>
+        <p>51暗黑网官方网站｜暗黑美学影像社区。以原创、正版、高清为底线，持续运营值得信赖的视频内容平台，陪伴每一位在夜色里创作的作者与企业伙伴。</p>
+      </div>
+      <div class="dk-foot-col">
+        <h4>内容</h4>
+        <a href="#dk-focus">焦点内容</a>
+        <a href="#dk-special">专题企划</a>
+        <a href="#dk-deep">深度解析</a>
+        <a href="#dk-rank">数据榜单</a>
+      </div>
+      <div class="dk-foot-col">
+        <h4>社区</h4>
+        <a href="#dk-authors">创作者矩阵</a>
+        <a href="#dk-reviews">用户评价</a>
+        <a href="#dk-faq">帮助中心</a>
+        <a href="#dk-faq">企业动态</a>
+      </div>
+      <div class="dk-foot-col">
+        <h4>官方</h4>
+        <a href="#dk-faq">投稿与联系</a>
+        <a href="#dk-faq">合作申请</a>
+        <a href="#dk-faq">内容规范</a>
+        <span>持续运营中</span>
+      </div>
+    </div>
+    <div class="dk-foot-bottom">
+      <span>© 2026 51暗黑网 版权所有 · 原创内容受版权保护</span>
+      <span>官方网站 · 高清正版 · 品质内容生态 · 备案号 演示备案 000000000 号</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 回到顶部 -->
+<button class="dk-top" id="dkTop" aria-label="回到顶部">↑</button>
+
+<!-- Toast -->
+<div class="dk-toast" id="dkToast" role="status" aria-live="polite"></div>
+
+<!-- 通用弹窗：评论 / 分享 / 投稿 -->
+<div class="dk-modal-mask" id="dkModalMask" role="dialog" aria-modal="true" aria-labelledby="dkModalTitle">
+  <div class="dk-modal" id="dkModal">
+    <button class="dk-modal-close" id="dkModalClose" aria-label="关闭弹窗">✕</button>
+    <div id="dkModalBody"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- 小工具 ---------- */
+  var toastEl = document.getElementById('dkToast');
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('dk-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('dk-show'); }, 2200);
+  }
+
+  /* ---------- 移动端导航折叠 ---------- */
+  var burger = document.getElementById('dkBurger');
+  var nav = document.getElementById('dkNav');
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('dk-open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.textContent = open ? '✕' : '☰';
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && nav.classList.contains('dk-open')){
+      nav.classList.remove('dk-open');
+      burger.setAttribute('aria-expanded','false');
+      burger.textContent = '☰';
+    }
+  });
+
+  /* ---------- 搜索前端反馈 ---------- */
+  var searchInput = document.getElementById('dkSearch');
+  var searchBtn = document.getElementById('dkSearchBtn');
+  var searchHint = document.getElementById('dkSearchHint');
+  var searchIndex = [
+    {t:'雨夜第六街', s:'焦点内容 · 城市探索 · 夜航阿澈'},
+    {t:'暗黑调色实验室', s:'专题企划 · 调色教程 · 更新中'},
+    {t:'灰阶与光', s:'创作者 · 布光教程 · 31.2万关注'},
+    {t:'夜色短片扶持计划', s:'专题 · 原创扶持 · 报名中'},
+    {t:'末班地铁的第十二节车厢', s:'热度榜第 1 · 官方发布'},
+    {t:'暗调人像布光三支点', s:'视频 · 教程干货 · 12.9万播放'},
+    {t:'午夜城市影像档案', s:'专题 · 在地文化 · 征集中'},
+    {t:'投稿流程与原创声明', s:'帮助中心 · FAQ'},
+    {t:'低频声场', s:'创作者 · 声音设计'},
+    {t:'新人榜', s:'数据榜单 · 每周更新'}
+  ];
+  function runSearch(){
+    var q = searchInput.value.trim();
+    if(!q){
+      searchHint.innerHTML = '<p>试试搜索：雨夜、调色、创作者、专题</p>';
+      searchHint.classList.add('dk-open');
+      return;
+    }
+    var hits = searchIndex.filter(function(it){
+      return it.t.indexOf(q) > -1 || it.s.indexOf(q) > -1;
+    });
+    if(hits.length){
+      searchHint.innerHTML = hits.slice(0,5).map(function(it){
+        return '<p class="dk-hit">' + it.t + '<br><span style="color:#75758a;font-size:11px">' + it.s + '</span></p>';
+      }).join('');
+    }else{
+      searchHint.innerHTML = '<p>暂未找到「' + q.replace(/[<>&]/g,'') + '」相关内容，可换个关键词，或到帮助中心查看投稿说明。</p>';
+    }
+    searchHint.classList.add('dk-open');
+  }
+  searchBtn.addEventListener('click', runSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); runSearch(); }
+  });
+  searchInput.addEventListener('input', function(){
+    if(!searchInput.value.trim()) searchHint.classList.remove('dk-open');
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.dk-search')) searchHint.classList.remove('dk-open');
+  });
+
+  /* ---------- 标签筛选 ---------- */
+  var chips = document.querySelectorAll('.dk-chip');
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      chips.forEach(function(c){ c.classList.remove('dk-active'); });
+      chip.classList.add('dk-active');
+      var cat = chip.getAttribute('data-dk-filter');
+      var items = document.querySelectorAll('#dkVidList .dk-viditem');
+      var shown = 0;
+      items.forEach(function(item){
+        var keep = (cat === 'all') || (item.getAttribute('data-dk-cat') === cat);
+        item.classList.toggle('dk-hidden', !keep);
+        if(keep) shown++;
+      });
+      toast(cat === 'all' ? '已显示全部视频条目' : '已筛选：' + chip.textContent + '（' + shown + ' 条）');
+    });
+  });
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  document.querySelectorAll('[data-dk-like]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var b = btn.querySelector('b');
+      var num = parseInt((b.textContent || '0').replace(/,/g,''), 10) || 0;
+      var liked = btn.classList.toggle('dk-liked');
+      num += liked ? 1 : -1;
+      if(num < 0) num = 0;
+      b.textContent = num.toLocaleString('en-US');
+      btn.firstChild.textContent = liked ? '♥ ' : '♥ ';
+      toast(liked ? '已点赞，感谢你的喜欢' : '已取消点赞');
+    });
+  });
+  document.querySelectorAll('[data-dk-fav]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var on = btn.classList.toggle('dk-on');
+      btn.textContent = on ? '★ 已收藏' : '☆ 收藏';
+      toast(on ? '已加入收藏，可在个人中心查看' : '已取消收藏');
+    });
+  });
+
+  /* ---------- 复制链接 ---------- */
+  function copyText(text){
+    if(navigator.clipboard && window.isSecureContext){
+      navigator.clipboard.writeText(text).then(function(){
+        toast('链接已复制，可分享给朋友');
+      }).catch(function(){
+        toast('复制失败，请手动复制地址栏链接');
+      });
+    }else{
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try{ document.execCommand('copy'); toast('链接已复制，可分享给朋友'); }
+      catch(err){ toast('复制失败，请手动复制地址栏链接'); }
+      document.body.removeChild(ta);
+    }
+  }
+  document.querySelectorAll('[data-dk-copy]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      copyText(document.title + ' · 51暗黑网');
+    });
+  });
+
+  /* ---------- 弹窗系统 ---------- */
+  var mask = document.getElementById('dkModalMask');
+  var modalBody = document.getElementById('dkModalBody');
+  var modalTitle = document.getElementById('dkModalTitle');
+  var modalClose = document.getElementById('dkModalClose');
+  var lastFocus = null;
+
+  function openModal(html){
+    lastFocus = document.activeElement;
+    modalBody.innerHTML = html;
+    mask.classList.add('dk-open');
+    document.body.style.overflow = 'hidden';
+    modalClose.focus();
+  }
+  function closeModal(){
+    mask.classList.remove('dk-open');
+    document.body.style.overflow = '';
+    modalBody.innerHTML = '';
+    if(lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modalClose.addEventListener('click', closeModal);
+  mask.addEventListener('click', function(e){
+    if(e.target === mask) closeModal();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && mask.classList.contains('dk-open')) closeModal();
+  });
+
+  /* 评论弹窗 */
+  function commentModal(title){
+    openModal(
+      '<h3 id="dkModalTitle">参与讨论</h3>' +
+      '<p class="dk-modal-sub">' + (title || '本期内容') + ' · 请围绕作品交流，尊重每一位创作者。</p>' +
+      '<div class="dk-field"><label for="dkCmtName">昵称（选填）</label><input id="dkCmtName" type="text" placeholder="夜航观众" maxlength="20"></div>' +
+      '<div class="dk-field"><label for="dkCmtText">评论内容</label><textarea id="dkCmtText" placeholder="说说你注意到的画面细节、光线处理或情绪感受…" maxlength="300"></textarea></div>' +
+      '<div class="dk-modal-actions"><button class="dk-btn dk-btn-ghost" data-dk-close>取消</button><button class="dk-btn dk-btn-primary" id="dkCmtSend">发布评论</button></div>'
+    );
+    var send = document.getElementById('dkCmtSend');
+    send.addEventListener('click', function(){
+      var txt = document.getElementById('dkCmtText').value.trim();
+      if(!txt){ toast('评论内容不能为空'); return; }
+      closeModal();
+      toast('评论已发布，感谢你的真实分享');
+    });
+  }
+
+  /* 分享弹窗 */
+  function shareModal(){
+    openModal(
+      '<h3 id="dkModalTitle">分享给朋友</h3>' +
+      '<p class="dk-modal-sub">把 51暗黑网的内容分享到常用平台，或复制链接手动发送。</p>' +
+      '<div class="dk-share-row">' +
+        '<button data-dk-share="微信">微信</button>' +
+        '<button data-dk-share="微博">微博</button>' +
+        '<button data-dk-share="QQ">QQ</button>' +
+        '<button data-dk-share="朋友圈">朋友圈</button>' +
+      '</div>' +
+      '<div class="dk-field" style="margin-top:18px"><label for="dkShareLink">页面标题</label><input id="dkShareLink" type="text" readonly value="51暗黑网 · 暗黑美学影像社区"></div>' +
+      '<div class="dk-modal-actions"><button class="dk-btn dk-btn-ghost" data-dk-close>关闭</button><button class="dk-btn dk-btn-primary" id="dkShareCopy">复制链接</button></div>'
+    );
+    document.getElementById('dkShareCopy').addEventListener('click', function(){
+      copyText(document.title + ' · 51暗黑网');
+    });
+    modalBody.querySelectorAll('[data-dk-share]').forEach(function(b){
+      b.addEventListener('click', function(){
+        toast('已准备分享到「' + b.getAttribute('data-dk-share') + '」，请使用对应应用完成发布');
+      });
+    });
+  }
+
+  /* 投稿弹窗 */
+  function submitModal(){
+    openModal(
+      '<h3 id="dkModalTitle">向 51暗黑网投稿</h3>' +
+      '<p class="dk-modal-sub">原创短片、教程或幕后记录均可。提交后 3 至 7 个工作日内反馈。</p>' +
+      '<div class="dk-field"><label for="dkSubTitle">作品标题</label><input id="dkSubTitle" type="text" placeholder="例如：雨夜第六街" maxlength="40"></div>' +
+      '<div class="dk-field"><label for="dkSubType">内容类型</label><select id="dkSubType"><option>暗调短片</option><option>教程干货</option><option>创作幕后</option><option>城市探索</option><option>企业合作项目</option></select></div>' +
+      '<div class="dk-field"><label for="dkSubDesc">创作说明</label><textarea id="dkSubDesc" placeholder="简要说明拍摄背景、使用设备与素材授权情况…" maxlength="500"></textarea></div>' +
+      '<div class="dk-modal-actions"><button class="dk-btn dk-btn-ghost" data-dk-close>稍后再说</button><button class="dk-btn dk-btn-primary" id="dkSubSend">提交投稿</button></div>'
+    );
+    document.getElementById('dkSubSend').addEventListener('click', function(){
+      var t = document.getElementById('dkSubTitle').value.trim();
+      if(!t){ toast('请先填写作品标题'); return; }
+      closeModal();
+      toast('投稿已提交，编辑团队会尽快与你联系');
+    });
+  }
+
+  /* 作者档案弹窗 */
+  var authorData = [
+    {name:'夜航阿澈', field:'城市暗调 · 导演', work:'86', fans:'24.8万', cls:'dk-a1', ch:'澈',
+     bio:'坚持用定焦拍夜景的城市导演，擅长在雨、雾与霓虹之间找秩序。作品节奏克制，偏爱长镜头与实景光，常年在 51暗黑网更新街拍短片与拍摄笔记，代表作《雨夜第六街》《末班地铁的第十二节车厢》。',
+     extra:'擅长：低照度街拍、雨夜光线、长镜头调度'},
+    {name:'灰阶与光', field:'布光 · 教程', work:'142', fans:'31.2万', cls:'dk-a2', ch:'灰',
+     bio:'低调人像布光教学创作者，讲参数也讲取舍。系列教程《一支灯拍暗调》累计播放超百万，被社区称为入门暗黑影像的必修课，内容持续在官网更新，并参与平台企业版教程共建。',
+     extra:'擅长：低调人像、单灯布光、参数拆解'},
+    {name:'拾夜人', field:'城市探索 · 纪录', work:'59', fans:'18.6万', cls:'dk-a3', ch:'拾',
+     bio:'专门在午夜出没的记录者，拍过菜市场、修车铺与凌晨的公交总站。他认为城市的真实藏在灯光照不到的地方，作品常配自采环境声，质感真实而有温度。',
+     extra:'擅长：纪实跟拍、环境声采集、午夜题材'},
+    {name:'三号机位', field:'幕后 · 制片', work:'73', fans:'15.9万', cls:'dk-a4', ch:'机',
+     bio:'从制片视角复盘拍摄现场，擅长把混乱的排期讲得清楚。分享分镜表、通告单与突发情况预案，是很多团队开机前必看的幕后作者，也是平台合作讲师。',
+     extra:'擅长：拍摄排期、现场管理、分镜规划'},
+    {name:'低频声场', field:'声音设计', work:'41', fans:'9.7万', cls:'dk-a5', ch:'声',
+     bio:'专注暗黑短片的声音设计，擅长用环境音与低频铺情绪。教程《把安静做出层次》被大量收藏，同时为社区创作者提供混音建议，风格耐心细致。',
+     extra:'擅长：环境音设计、低频铺陈、混音建议'},
+    {name:'一帧不剪', field:'访谈 · 影评', work:'98', fans:'12.4万', cls:'dk-a6', ch:'帧',
+     bio:'以长访谈和画面细读见长的内容作者，常与导演聊创作动机与失败经验。文字扎实，问题犀利，是 51暗黑网品牌故事栏目的常驻作者之一。',
+     extra:'擅长：深度访谈、画面细读、创作复盘'}
+  ];
+
+  function authorModal(idx){
+    var a = authorData[idx];
+    if(!a) return;
+    openModal(
+      '<div class="dk-author-modal">' +
+      '<div class="dk-am-head"><div class="dk-avatar ' + a.cls + '">' + a.ch + '</div><div><b>' + a.name + '</b><span>' + a.field + '</span></div></div>' +
+      '<div class="dk-am-data"><div><b>' + a.work + '</b>作品</div><div><b>' + a.fans + '</b>关注者</div><div><b>4.9</b>口碑评分</div></div>' +
+      '<p>' + a.bio + '</p>' +
+      '<p style="color:#75758a;font-size:12px">' + a.extra + '</p>' +
+      '<div class="dk-modal-actions"><button class="dk-btn dk-btn-ghost" data-dk-close>关闭</button><button class="dk-btn dk-btn-primary" id="dkFollow">关注创作者</button></div>' +
+      '</div>'
+    );
+    document.getElementById('dkFollow').addEventListener('click', function(){
+      closeModal();
+      toast('已关注「' + a.name + '」，新作上线会第一时间提醒');
+    });
+  }
+
+  document.querySelectorAll('[data-dk-author]').forEach(function(card){
+    var idx = parseInt(card.getAttribute('data-dk-author'), 10);
+    card.addEventListener('click', function(){ authorModal(idx); });
+    card.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); authorModal(idx); }
+    });
+  });
+
+  /* 统一打开弹窗按钮 */
+  document.querySelectorAll('[data-dk-open]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var type = btn.getAttribute('data-dk-open');
+      if(type === 'comment') commentModal(btn.getAttribute('data-dk-title') || '本期内容');
+      else if(type === 'share') shareModal();
+      else if(type === 'submit') submitModal();
+    });
+  });
+
+  /* 弹窗内关闭按钮委托 */
+  modalBody.addEventListener('click', function(e){
+    if(e.target.closest('[data-dk-close]')) closeModal();
+  });
+
+  /* ---------- 回到顶部 ---------- */
+  var topBtn = document.getElementById('dkTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 560) topBtn.classList.add('dk-show');
+    else topBtn.classList.remove('dk-show');
+  }, {passive:true});
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+})();
+</script>
+</body>
+  </html>
